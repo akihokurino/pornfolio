@@ -1,0 +1,315 @@
+@charset "UTF-8";
+/* CSS Document */
+
+*{
+	margin: 0px;
+	padding: 0px;
+	font-size: 14px;
+}
+
+html{
+	-webkit-overflow-scrolling:touch;
+	height: 100%;
+}
+
+body{
+	margin: 0px;
+	font-size: 14px;
+	font-family:'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3','Lucida Grande',Meiryo, メイリオ, sans-serif;
+	background-color: #fff;
+	height: 100%;
+	color: #333333;
+	border-top: 2px solid #FE5F56;
+}
+
+a{
+	color: #444444;
+	text-decoration: none;
+}
+
+input[type="text"]:focus {
+	outline: 0 !important;
+	border-color: #FECCC8 !important;
+}
+
+textarea:focus {
+	outline: 0 !important;
+	border-color: #FECCC8 !important;
+}
+
+body > div.container{
+	height: auto;
+	-webkit-transition: 0.1s linear all;
+}
+
+.container.ng-enter{
+	@include transition-duration(0.1s);
+    @include transition-timing-function(linear);
+    opacity: 0;
+}
+
+.container.ng-enter-active{
+	opacity: 1;
+}
+
+.container.ng-leave {
+	@include transition-duration(0.1s);
+	@include transition-timing-function(linear);
+	opacity: 1;
+}
+
+.container.ng-leave-active {
+	opacity: 0;
+}
+
+
+div.container{
+	min-height: 100%;
+}
+
+h3 {
+	font-weight: normal;
+	font-family: "ヒラギノ角ゴ Pro W3";
+}
+
+/*-----ヘッダー部分のスタイル-----*/
+header{
+	width: 100%;
+	height: 67px;
+	border-bottom: solid 1px #e2e2e2;
+	font-size: 17px;
+}
+
+header a:hover {
+	opacity: 0.7;
+}
+
+.inner-header{
+	width: 1080px;
+	height: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.left-header{
+	float: left;
+	width: 235px;
+	height: 100%;
+	margin-left: 15px;
+}
+
+.left-header a{
+	color: #999;
+	line-height: 80px;
+	font-size: 16px;
+}
+
+.center-header{
+	float: left;
+	width: 580px;
+	height: 100%;
+}
+
+.center-header a{
+	display: block;
+	line-height: 67px;
+	width: 234px;
+	height: 67px;
+	margin: 0 auto;
+	background-image: url(../images/logo.png);
+	background-repeat: no-repeat;
+	background-position: 0px 15px;
+}
+
+.right-header{
+	float: right;
+	width: 235px;
+	height: 100%;
+	text-align: right;
+	margin-right: 15px;
+}
+
+.right-header a{
+	color: #999;
+	line-height: 80px;
+	font-size: 16px;
+}
+
+
+
+/*-----認証用モーダルのデザイン-----*/
+.authorization-modal{
+	z-index: 1000;
+	width: 420px;
+	position: fixed;
+	left: 50%;
+	margin-left: -200px;
+	top: 0;
+	border: solid 3px #FE5F56;
+	border-radius: 3px;
+	background-color: #fff;
+	padding: 25px;
+	color: #444;
+	font-size: 14px;
+	display: none;
+}
+
+.message{
+	text-align: center;
+	line-height: 25px;
+}
+
+.authorization-modal input[type="text"]{
+	width: 150px;
+	height: 30px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 30px;
+	border: solid 1px #e2e2e2;
+	border-radius: 3px;
+	padding-left: 5px;
+}
+
+.authorization-modal .send-code-btn{
+	width: 80px;
+	height: 30px;
+	margin: 0 auto;
+	margin-top: 15px;
+	background-color: #FE5F56;
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.authorization-layer{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.7;
+	z-index: 100;
+	display: none;
+}
+
+
+
+
+/*-----下部広告のスタイル-----*/
+.ad-zone{
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #eee;
+}
+
+.inner-ad-zone{
+	width: 1080px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.inner-ad-zone img{
+	width: 320px;
+	height: 250px;
+	display: inline-block;
+	margin-right: 55px;
+}
+
+.inner-ad-zone img.last-ad{
+	margin-right: 0px;
+}
+
+
+
+/*-----フッター部分のスタイル-----*/
+footer{
+	width: 100%;
+	height: 77px;
+}
+
+.inner-footer{
+	width: 1080px;
+	margin: 0 auto;
+	height: 100%;
+	overflow: hidden;
+}
+
+.left-footer{
+	width: 800px;
+	float: left;
+}
+
+.left-footer a:hover {
+	opacity: 0.7;
+}
+
+.right-footer{
+	width: 280px;
+	float: right;
+}
+
+.right-footer h2{
+	margin-left: 30px;
+	background-image: url(../images/logo.png);
+	background-repeat: no-repeat;
+	width: 234px;
+	height: 67px;
+	background-position: 0px 15px;
+}
+
+.left-footer .footer-list{
+	list-style-type: none;
+	overflow: hidden;
+}
+
+.footer-list li{
+	float: right;
+	line-height: 67px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.footer-list li a{
+	color: #999;
+}
+
+
+/*-----広告部分のスタイル-----*/
+.ad-zone{
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #eee;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+}
+
+.inner-ad-zone{
+	width: 1080px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.inner-ad-zone .ad-wrap{
+	width: 320px;
+	height: 250px;
+	display: inline-block;
+	margin-right: 55px;
+}
+
+.inner-ad-zone .ad-wrap:last-child{
+	margin-right: 0px;
+}
+
+
+
+
+
+

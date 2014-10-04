@@ -1,0 +1,111 @@
+<div class="create" ng-init="initialize()">
+
+	<div class="sub-header">
+		<ul>
+			<li><a href="#!/top">Pornfolioトップ</a></li>
+			<li>まとめを作る</li>
+		</ul>
+	</div>
+
+	<div class="content">
+		<div class="inner-content">
+			<div class="left-content">
+				<h3>まとめを作る</h3>
+
+				<div class="basic-data-input">
+					<input type="text" class="basic-title-input" ng-model="title" placeholder="まとめのタイトル"/>
+					<p class="error-msg">
+						{{title_error_msg}}
+					</p>
+					<textarea class="basic-description-input" ng-model="desc" placeholder="まとめの簡単な説明"></textarea>
+					<p class="error-msg desc-error">
+						{{desc_error_msg}}
+					</p>
+					<div class="select-wrap">
+						<select class="basic-janle-select" ng-model="category" ng-options="c.id as c.name for c in api.data.category">
+							<option value="">-- カテゴリを選択して下さい --</option>
+						</select>
+						<p class="error-msg category-error">
+							{{category_error_msg}}
+						</p>
+					</div>
+					<div class="username-wrap">
+						<input type="text" class="basic-name-input" ng-model="user.name" placeholder="まとめ主のお名前"/>
+						<p class="error-msg desc-error">
+							{{name_error_msg}}
+						</p>
+					</div>
+				</div>
+
+				<div class="output-zone">
+					<div class="output" ng-repeat="content in contents">
+						<div class="hover-zone" ng-mouseenter="showInsertLine($index)" ng-mouseleave="hideInsertLine($index)" id="hover-zone{{$index}}" ng-click="showInsertInputBtns($index)"></div>
+						<div class="insert-zone" ng-include="" src="'partials/insert_input.html'"></div>
+						<div class="content-zone">
+							<div ng-switch on="content.content_type">
+								<p class="headline" ng-switch-when="2">
+									{{content.details.substance}}
+								</p>
+								<iframe ng-switch-when="1" id="iframe{{$index}}" ng-src="{{appendSrc(content.details.substance)}}"></iframe>
+								<p ng-switch-when="7" class="text" ng-bind-html="sanitize(content.details.substance)"></p>
+								<div class="option-btns">
+									<span class="delete-content-btn" ng-click="deleteContent($index, content)">削除</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="default-input-zone">
+					<div class="input-zone headline-input-zone">
+						<input type="text" class="headline-input" ng-model="headline" placeholder="見出しを入力して下さい" />
+						<p class="error-msg">
+							{{headline_error_msg}}
+						</p>
+						<div class="cancel-btn" ng-click="cancelAdd()">キャンセル</div>
+						<div class="add-btn" ng-click="addData('headline', headline)">追加</div>
+					</div>
+					<div class="input-zone url-input-zone">
+						<input type="text" class="url-input" ng-model="url" placeholder="xvideosまたはアゲサゲのURLを入力して下さい" />
+						<p class="error-msg">
+							{{url_error_msg}}
+						</p>
+						<div class="cancel-btn" ng-click="cancelAdd()">キャンセル</div>
+						<div class="add-btn" ng-click="addData('url', url)">追加</div>
+					</div>
+					<div class="input-zone text-input-zone">
+						<textarea type="text" class="text-input" ng-model="text" placeholder="本文を入力して下さい"></textarea>
+						<p class="error-msg">
+							{{text_error_msg}}
+						</p>
+						<div class="cancel-btn" ng-click="cancelAdd()">キャンセル</div>
+						<div class="add-btn" ng-click="addData('text', text)">追加</div>
+					</div>
+				</div>
+
+				<div class="input-btns">
+					<div class="headline-btn input-btn" ng-click="showInput('headline')"></div>
+					<div class="url-btn input-btn" ng-click="showInput('url')"></div>
+					<div class="text-btn input-btn" ng-click="showInput('text')"></div>
+				</div>
+
+				<span class="next-btn" ng-click="saveData()">まとめを確認</span>
+			</div>
+			<div class="right-content">
+				<div class="side-progress">
+					<p class="now">まとめ本文制作</p>
+					<p>確認</p>
+					<p>作成完了!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="bottom-progress">
+		<ul>
+			<li class="now">まとめ本文制作</li>
+			<li>確認</li>
+			<li>作成完了!</li>
+		</ul>
+	</div>
+</div>

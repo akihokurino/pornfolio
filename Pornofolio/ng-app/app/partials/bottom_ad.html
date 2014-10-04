@@ -1,0 +1,5 @@
+<div class="ad-zone">
+	<div class="inner-ad-zone">
+		<div class="ad-wrap" ng-repeat="ad in footer_ads track by $index" ng-click="countClick(ad.id)" ng-bind-html="parseHtml(ad.ad_object)"></div>
+	</div>
+</div>

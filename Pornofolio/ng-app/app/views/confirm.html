@@ -1,0 +1,89 @@
+<div class="confirm" ng-init="initialize()">
+
+	<div class="sub-header">
+		<ul>
+			<li><a href="#!/top">Pornfolioトップ</a></li>
+			<li>まとめを作る</li>
+		</ul>
+	</div>
+
+	<div class="content">
+		<div class="inner-content">
+			<div class="left-content">
+				<h3>まとめの確認</h3>
+				<div class="tag-input-zone">
+					<span ng-repeat="tag in data.tags track by $index" class="tag">
+						{{tag}}
+						<span class="close-tag-btn" ng-click="deleteTag($index)"></span>
+					</span>
+					<input type="text" ng-model="tag" class="tag-input" ng-keydown="addTag()" placeholder="Enterでタグを追加"/>
+				</div>
+				<div class="basic-data">
+					<div class="basic-top-content">
+						<img ng-src="{{current_thumbnail}}" ng-click="showModal()"/>
+						<p class="title">{{data.title}}</p>
+					</div>
+					<p class="description">{{data.desc}}</p>
+					<div class="meta-data">
+						<div class="category">
+							カテゴリー:
+							<span>{{showCategoryName(data.category)}}</span>
+						</div>
+						<div class="name">
+							まとめ主:
+							<span>{{data.user_name ? data.user_name : "名無しさん"}}</span>
+						</div>
+					</div>
+					<a href="#!/create" class="reduction-btn" ng-click="backPage()">
+						&raquo; 修正する<br />
+					</a>
+				</div>
+				<div class="your-output-zone">
+					<div class="your-output" ng-repeat="content in data.contents track by $index">
+						<div ng-switch on="content.content_type">
+							<p class="your-headline" ng-switch-when="2">
+								{{content.details.substance}}
+							</p>
+							<iframe ng-switch-when="1" src="" id="iframe{{$index}}" class="your-movie" ng-src="{{appendSrc(content.details.substance)}}"></iframe>
+							<p ng-switch-when="7" class="your-text" ng-bind-html="sanitize(content.details.substance)"></p>
+						</div>
+					</div>
+				</div>
+				<div class="btns-zone">
+					<a href="#!/create" class="back-btn" ng-click="backPage()">前に戻る</a>
+					<a href="" class="next-btn" ng-click="sendData()">まとめ作成！</a>
+				</div>
+				<div class="alert-message">
+					１つ以上コンテンツを追加して下さい
+				</div>
+			</div>
+			<div class="right-content">
+				<div class="side-progress">
+					<p>まとめ本文制作</p>
+					<p class="now">確認</p>
+					<p>作成完了!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="bottom-progress">
+		<ul>
+			<li>まとめ本文制作</li>
+			<li class="now">確認</li>
+			<li>作成完了!</li>
+		</ul>
+	</div>
+
+	<div class="thumbnails-modal">
+		<div class="modal-header">
+			<h4>サムネイルを選択する</h4>
+			<div class="cancel-modal" ng-click="hideModal()">
+				<span class="batsu">×</span>キャンセル
+			</div>
+		</div>
+		<div class="modal-content">
+			<img ng-src="{{thumbnail[0]}}" ng-repeat="thumbnail in random_thumbnails" ng-click="selectThumbnail(thumbnail[0])"/>
+		<div>
+	</div>
+</div>

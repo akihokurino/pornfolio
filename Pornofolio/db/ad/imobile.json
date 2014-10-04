@@ -1,0 +1,21 @@
+{
+    "company": "imobile",
+    "ad_object": [
+        {
+            "content": "<iframe frameborder=\"no\" scrolling=\"no\" style=\"width: 300px;height: 250px;overflow: hidden; margin: 0px;\" src=\"http://spnet2-1.i-mobile.co.jp/ad_spot.aspx?pid=27811&amp;asid=206769&amp;asn=1&amp;width=300&amp;height=250\"></iframe>",
+            "type": "rectangle"
+        },
+        {
+            "content": "<iframe frameborder=\"no\" scrolling=\"no\" style=\"width: 300px;height: 250px;overflow: hidden; margin: 0px;\" src=\"http://spnet33.i-mobile.co.jp/ad_spot.aspx?pid=27811&amp;asid=206769&amp;asn=1&amp;width=300&amp;height=250\"></iframe>",
+            "type": "rectangle"
+        },
+        {
+            "content": "<iframe frameborder=\"no\" scrolling=\"no\" style=\"width: 250px;height: 250px;overflow: hidden; margin: 0px;\" src=\"http://spnet2-1.i-mobile.co.jp/ad_spot.aspx?pid=27811&amp;asid=207062&amp;asn=1&amp;width=250&amp;height=250\"></iframe>",
+            "type": "square"
+        },
+        {
+            "content": "<iframe frameborder=\"no\" scrolling=\"no\" style=\"width: 250px;height: 250px;overflow: hidden; margin: 0px;\" src=\"http://spnet33.i-mobile.co.jp/ad_spot.aspx?pid=27811&amp;asid=207062&amp;asn=1&amp;width=250&amp;height=250\"></iframe>",
+            "type": "square"
+        }
+    ]
+}

@@ -1,0 +1,115 @@
+<div class="view" ng-init="initialize()">
+	<div class="sub-header">
+		<ul>
+			<li><a href="#!/top">Pornfolioトップ</a></li>
+			<li ng-repeat="category in content.post.categories">
+				<a href="#!/?category_id={{category.id}}">{{category.name}}</a>
+			</li>
+			<li ng-repeat="tag in content.post.tags">{{tag.name}}</li>
+		</ul>
+	</div>
+
+	<div class="content-header">
+		<div class="inner-content-header">
+			<div class="left-content-header">
+				<div class="content-header-maindata">
+					<div class="post-thumb">
+						<img ng-src="{{content.post.thumb}}" />
+					</div>
+					<h1 class="title">{{content.post.title}}</h1>
+					<p class="description">
+						{{content.post.desc}}
+					</p>
+				</div>
+				<div class="content-header-metadata">
+					<span class="like-btn" ng-click="sendLike()" ng-hide="content.post.liked"></span>
+					<span class="unlike-btn" ng-click="sendUnLike()" ng-show="content.post.liked"></span>
+					<span class="like-count">{{content.post.like_count}}</span>
+					<span class="add-favorite-btn" ng-click="addFavorite()" ng-hide="content.post.favorited"></span>
+					<span class="remove-favorite-btn" ng-click="removeFavorite()" ng-show="content.post.favorited"></span>
+					<span class="meta-data">
+						{{content.post.created_at | date:'yyyy年MM月dd日'}}
+						<br />
+						<span ng-if="content.user.name">
+							(まとめ主: {{content.post.user.name}})
+						</span>
+					</span>
+				</div>
+			</div>
+			<div class="right-content-header">
+				<span class="view-count">{{content.post.view_count}}</span>
+				<span>view</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="content">
+		<div class="inner-content">
+			<div class="left-content">
+				<div ng-repeat="content in content.post.contents track by $index" class="body">
+					<div ng-switch on="content.content_type.name">
+						<div ng-switch-when="header">
+							<h2 class="label" ng-repeat="detail in content.content_details">
+								{{detail.text}}
+							</h2>
+						</div>
+						<div class="video" ng-switch-when="video">
+							<iframe ng-repeat="detail in content.content_details" id="iframe{{detail.id}}" ng-src="{{appendSrc(detail.text)}}"></iframe>
+						</div>
+						<div ng-switch-when="text">
+							<p class="text" ng-repeat="detail in content.content_details">
+								{{detail.text}}
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="btns-zone">
+					<span class="like-btn" ng-click="sendLike()" ng-hide="content.post.liked"></span>
+					<span class="unlike-btn" ng-click="sendUnLike()" ng-show="content.post.liked"></span>
+					<span class="like-count">{{content.post.like_count}}</span>
+					<span class="add-favorite-btn" ng-click="addFavorite()" ng-hide="content.post.favorited"></span>
+					<span class="remove-favorite-btn" ng-click="removeFavorite()" ng-show="content.post.favorited"></span>
+				</div>
+				<h3>コメント</h3>
+				<div class="comment-box" ng-repeat="comment in content.post.comments">
+					<div class="comment-metadata">
+						<span class="comment-count"></span>
+						<span class="comment-date">
+							{{comment.created_at | date:'yyyy年MM月dd日'}}
+						</span>
+					</div>
+					<div class="body">
+						{{comment.text}}
+					</div>
+				</div>
+				<div class="comment-post">
+					<textarea class="comment-input" ng-model="comment_body"></textarea>
+					<div class="comment-post-btn" ng-click="postComment()">
+						送信
+					</div>
+				</div>
+			</div>
+			<div class="right-content">
+				<div ng-include="" src="'partials/side_ad.html'"></div>
+
+				<h3>今週の人気TOP5</h3>
+				<div class="side-ranking-zone">
+					<a class="content-box" ng-repeat="post in top5" href="#!/view/{{post.post_id}}">
+						<div class="thumbnail-box">
+							<img ng-src="{{post.thumb}}" />
+						</div>
+						<div class="bottom-ranking-box">
+							<p class="title">{{strimwidth(post.title, 8)}}</p>
+							<p class="description">{{strimwidth(post.desc, 25)}}</p>
+							<div class="side-meta-data">
+								<span class="category">{{post.category.name}}</span>
+								<span class="like">♥{{post.like_count}}</span>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div ng-include="" src="'partials/bottom_ad.html'"></div>
+</div>

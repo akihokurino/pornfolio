@@ -1,0 +1,5 @@
+cors:
+  origin_regex: .*
+
+security:
+  token_length: 5

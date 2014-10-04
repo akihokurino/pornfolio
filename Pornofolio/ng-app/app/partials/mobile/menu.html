@@ -1,0 +1,31 @@
+<div class="list-title">
+	<h2>メニュー</h2>
+</div>
+<ul class="main-menu">
+	<li class="home-li">
+		<a ng-href="#!/top" slide-menu>Pornfolioトップ</a>
+	</li>
+	<li class="favorite-li">
+		<a ng-href="#!/favorite" slide-menu>お気に入り一覧</a>
+	</li>
+	<li class="tag-li">
+		<a ng-href="#!/tags" slide-menu>タグ検索</a>
+	</li>
+</ul>
+<div class="list-title">
+	<h2>カテゴリー</h2>
+</div>
+<ul class="category">
+	<li class="category-default category-li">
+		<a ng-href="#!/top" slide-menu>
+			<span class="pink-circle"></span>
+			すべて
+		</a>
+	</li>
+	<li ng-repeat="category in categories track by $index" id="category{{category.id}}" class="category-li">
+		<a ng-href="#!/?category_id={{category.id}}" slide-menu>
+			<span class="pink-circle"></span>
+			{{category.name}}
+		</a>
+	</li>
+</ul>

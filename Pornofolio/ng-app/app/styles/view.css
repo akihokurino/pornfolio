@@ -1,0 +1,564 @@
+/*-----サブヘッダー部分のスタイル-----*/
+.view .sub-header{
+	width: 100%;
+	height: 32px;
+	border-bottom: solid 1px #CCC;
+}
+
+.view .sub-header ul{
+	width: 1080px;
+	margin: 0 auto;
+	list-style-type: none;
+	overflow: hidden;
+	height: 100%;
+}
+
+.view .sub-header ul li{
+	float: left;
+	height: 100%;
+	line-height: 34px;
+	padding-left: 10px;
+	padding-right: -5px;
+	color: #999;
+}
+
+.view .sub-header ul li a{
+	color: #999;
+}
+
+.view .sub-header ul li:first-child{
+	background: url(../images/sub-header-arrow.png) no-repeat;
+	background-size: 15px 34px;
+	background-position: right center;
+	padding-right: 20px;
+}
+
+.view .sub-header ul li:nth-child(2){
+	background: url(../images/sub-header-arrow.png) no-repeat;
+	background-size: 15px 34px;
+	background-position: right center;
+	padding-right: 20px;
+}
+
+
+
+/*-----上部コンテンツのスタイル-----*/
+.view .content-header{
+	width: 100%;
+	background-color: #eee;
+	border-bottom: 1px solid #CCC;
+}
+
+.view .inner-content-header{
+	width: 1080px;
+	height: auto;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.view .left-content-header{
+	width: 855px;
+	height: auto;
+	float: left;
+	margin-left: 20px;
+	padding-bottom: 32767px;
+	margin-bottom: -32767px;
+}
+
+.view .content-header-maindata{
+	overflow: hidden;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+.view .content-header-maindata .post-thumb {
+	width: 130px;
+	float: left;
+	height:100px;
+	overflow: hidden;
+	margin-top: -5px;
+	margin-right: 15px;
+	border: 1px solid white;
+}
+
+.view .content-header-maindata img{
+	width: 130px;
+}
+
+.view .content-header-maindata .title{
+	font-size: 27px;
+	font-weight: normal;
+	color: #444;
+	margin-top: -5px;
+	margin-bottom: 3px;
+	line-height: 1.3em;
+}
+
+.view .content-header-maindata .description{
+	font-size: 13px;
+	color: #999;
+}
+
+.view .content-header-metadata{
+	height: 45px;
+	text-align: center;
+	position: relative;
+}
+
+.view .content-header-metadata span{
+	line-height: 65px;
+}
+
+.view .content-header-metadata .like-btn,
+.view .btns-zone .like-btn {
+	display: inline-block;
+	width: 111px;
+	height: 34px;
+	line-height: 35px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #666;
+	background: url(../images/btn-like.png) no-repeat;
+	background-size: 111px 34px;
+	background-position: 0 0;
+	text-align: left;
+	padding-left: 29px;
+	cursor: pointer;
+}
+.view .content-header-metadata .like-btn:hover,
+.view .btns-zone .like-btn:hover {
+	opacity: 0.8;
+}
+
+.view .unlike-btn{
+	display: inline-block;
+	width: 111px;
+	height: 34px;
+	line-height: 35px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #666;
+	background: url(../images/btn-like_done.png) no-repeat;
+	background-size: 111px 34px;
+	background-position: 0 0;
+	text-align: left;
+	padding-left: 29px;
+	cursor: pointer;
+}
+
+.view .unlike-btn:hover {
+	opacity: 0.8;
+}
+
+.view .like-count {
+    display: inline-block;
+    background-color: #fff;
+    height: 32px;
+    line-height: 35px !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    top: -11px;
+    cursor: pointer;
+    color: #444;
+    border: solid 1px #e2e2e2;
+    margin-left: -20px;
+}
+
+.view .like-count:after {
+    content: ' ';
+    height: 0;
+    position: absolute;
+    width: 0;
+    border: solid transparent;
+    right: 100%;
+    border-width: 7px;
+    border-right-color: #fff;
+    top: 9px;
+}
+
+.view .like-count:before {
+    content: ' ';
+    height: 0;
+    position: absolute;
+    width: 0;
+    border: solid transparent;
+    right: 100%;
+    border-width: 9px;
+    border-right-color: #e2e2e2;
+    top: 7px;
+}
+
+
+.view .content-header-metadata .add-favorite-btn,
+.view .btns-zone .add-favorite-btn {
+	display: inline-block;
+	width: 176px;
+	height: 33px;
+	line-height: 35px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #666;
+	background: url(../images/btn-favorite.png) no-repeat;
+	background-size: 176px 33px;
+	text-align: left;
+	padding-left: 34px;
+	margin-left: 20px;
+	margin-right: 80px;
+	cursor: pointer;
+}
+
+.view .content-header-metadata .add-favorite-btn:hover,
+.view .btns-zone .add-favorite-btn:hover {
+	opacity: 0.8;
+}
+
+.view .remove-favorite-btn{
+	display: inline-block;
+	width: 176px;
+	height: 33px;
+	line-height: 35px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #666;
+	background: url(../images/btn-favorite_done.png) no-repeat;
+	background-size: 176px 33px;
+	text-align: left;
+	padding-left: 34px;
+	margin-left: 20px;
+	margin-right: 80px;
+	cursor: pointer;
+}
+
+.view .remove-favorite-btn:hover {
+	opacity: 0.8;
+}
+
+.view .content-header-metadata .meta-data{
+	position: absolute;
+	bottom: 30px;
+	right: 20px;
+	line-height: 20px;
+	color: #878787;
+	text-align: right;
+}
+
+.view .right-content-header{
+	width: 175px;
+	background-color: #fff;
+	float: right;
+	margin-right: 20px;
+	height: 100%;
+	line-height: 100%;
+	text-align: center;
+	box-sizing: border-box;
+	padding-top: 7%;
+	padding-bottom: 32767px;
+	margin-bottom: -32767px;
+	color: #868686;
+}
+
+.view .right-content-header span.view-count{
+	display: block;
+	font-size: 22px;
+	text-align: center;
+	padding-right: 5px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	color: #444444;
+}
+
+
+/*-----コンテンツ部分のスタイル-----*/
+.view .content{
+	width: 100%;
+	padding-top: 10px;
+}
+
+.view .inner-content{
+	width: 1080px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.view .left-content{
+	width: 700px;
+	float: left;
+	margin-left: 40px;
+	box-sizing: border-box;
+	padding-right: 10px;
+	border-right: solid 1px #e2e2e2;
+	padding-bottom: 10px;
+}
+
+.view .body{
+	margin-top: 0px;
+}
+
+.view .label{
+	margin: 0 auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	color: #444;
+	padding-left: 30px;
+	/*margin-left: 15px;*/
+	font-size: 18px;
+	font-weight: normal;
+	border-bottom: solid 2px #FE5F56;
+	background: url(../images/circle-pink-half.png) no-repeat;
+	background-size: 22px;
+	background-position: left bottom;
+	letter-spacing: 1px;
+	width: 585px;
+
+}
+
+.view .video {
+	margin-left: auto;
+	margin-right: auto;
+	width: 97%;
+	/*background: #F8F8F8;*/
+	/*
+	padding-top: 10px;
+	padding-bottom: 10px;
+	*/
+}
+
+.view iframe{
+	display: block;
+	width: 580px;
+	height: 400px;
+	margin: 0 auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.view .text{
+	width: 552px;
+	margin: 0 auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	font-size: 14px;
+	color: #666;
+	letter-spacing: 1px;
+	background: #F8F8F8;
+	padding: 10px;
+	line-height: 20px;
+	border-radius: 3px;
+}
+
+.view .btns-zone{
+	width: 580px;
+	margin-top: 60px;
+	margin-left: 140px;
+	overflow: hidden;
+}
+
+.view .left-content h3{
+	font-size: 18px;
+	background-color: #eee;
+	height: 36px;
+	line-height: 35px;
+	padding-left: 15px;
+	border-left: 15px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	letter-spacing: 1px;
+	color: #444;
+	box-sizing: border-box;
+	margin-top: 20px;
+	margin-bottom: 15px;
+	margin-left: 15px;
+}
+
+.view .comment-box{
+	border-bottom: solid 1px #e2e2e2;
+	padding-bottom: 10px;
+	margin-left: 20px;
+}
+
+.view .comment-box .comment-metadata{
+	overflow: hidden;
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+
+.view .comment-metadata span.comment-count{
+	float: left;
+	height: 14px;
+	width: 18px;
+	background: url(../images/comment.png) no-repeat;
+	background-size: 18px 14px;
+	background-position: left center;
+}
+
+.view .comment-metadata span.comment-date{
+	float: right;
+	padding-right: 3px;
+	color: #878787;
+	font-size: 12px;
+	letter-spacing: 1px;
+}
+
+.view textarea.comment-input{
+	display: block;
+	width: 653px;
+	resize: none;
+	min-height: 70px;
+	border: solid 1px #DDDDDD;
+	border-radius: 3px;
+	margin-top: 10px;
+	margin-left: 20px;
+	font-size: 15px;
+	padding: 5px;
+}
+
+.view textarea.comment-input:hover {
+	border: solid 1px #FECCC8;;
+}
+
+.view .comment-post-btn{
+	width: 110px;
+	height: 33px;
+	margin: 0 auto;
+	margin-top: 30px;
+	text-align: center;
+	line-height: 33px;
+	letter-spacing: 5px;
+	background-color: #aaa;
+	color: #fff;
+	border-radius: 3px;
+	font-size: 16px;
+}
+
+.view .comment-post-btn:hover {
+	background-color: #888;
+	cursor: pointer;
+}
+
+.view .right-content{
+	width: 320px;
+	margin-top: 10px;
+	float: left;
+	box-sizing: border-box;
+}
+
+.view .right-content .side-ad-wrap {
+	display: block;
+	width: 250px;
+	height: auto;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+.view .right-content h3 {
+	margin-bottom: 0px;
+	margin-top: 40px;
+	margin-left: 0px;
+	font-size: 20px;
+	background-color: #eee;
+	height: 36px;
+	line-height: 35px;
+	padding-left: 20px;
+	border-left: 15px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	letter-spacing: 1px;
+	color: #444;
+}
+
+.view .side-ranking-zone{
+	float: left;
+	width: 320px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	clear: both;
+	overflow: hidden;
+	/*background: #EEE;*/
+}
+
+.view .side-ranking-zone .content-box{
+	width: 285px;
+	height: 85px;
+	overflow: hidden;
+	float: left;
+	margin-top: 5px;
+	margin-bottom: 1px;
+	margin-left: 7px;
+	margin-right: 7px;
+	font-size: 14px;
+	box-shadow: 0 0 2px #999;
+	border-left: 5px solid #FE8880;
+	background: white;
+	padding:7px;
+}
+
+.view .content-box:hover {
+	background: #EEE;
+}
+
+.thumbnail-box {
+	float: left;
+	width: 108px;
+	height: 86px;
+	overflow: hidden;
+	margin-right: 10px;
+}
+
+.view .content-box .thumbnail-box img{
+	width: 128px;
+	height: auto;
+}
+
+.view .side-ranking-zone .bottom-ranking-box {
+	float: left;
+	width: 156px;
+	height: 100%;
+}
+
+.view .side-ranking-zone .title{
+	width: 100%;
+	padding: 3px;
+	padding-left: 5px;
+	padding-bottom: 0px;
+	font-size: 16px;
+	border-bottom: 2px dotted #FE8880;
+}
+
+.view .side-ranking-zone .description{
+	width: 99%;
+	height: 38px;
+	padding: 5px;
+	padding-top: 4px;
+	padding-left: 5px;
+	padding-bottom: 0px;
+	font-size: 12px;
+	color: #888;
+}
+
+.view .side-ranking-zone .side-meta-data {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.view .side-ranking-zone .category{
+	display: inline-block;
+	float: left;
+	width: 50%;
+	color: #999999;
+	font-weight: normal;
+	padding-left: 5px;
+}
+
+.view .side-ranking-zone .like{
+	display: inline-block;
+	float: right;
+	text-align: right;
+	width: 30%;
+	color: #FE5F56;
+	padding-right: 0px;
+}
+

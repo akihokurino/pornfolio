@@ -1,0 +1,30 @@
+{
+  "name": "oh-my-zsh",
+  "description": "A chef-solo compatible cookbook to install and configure oh-my-zsh",
+  "long_description": "# Description\n\nThis cookbook installs zsh and configures oh-my-zsh framework for the specified users. A rewrite of https://github.com/shingara/oh-my-zsh-chef.\n\n# Requirements\n\nThis cookbook depends on opscode [zsh](https://github.com/opscode-cookbooks/zsh) and fnichol's [git](https://github.com/fnichol/chef-git) cookbooks.\n\n# Attributes\n\n* `node['oh-my-zsh']['users']` - users and their settings overrides, e.g.\n\n```json\n[\n  {\n    \"login\": \"vaskas\",\n    \"theme\": \"sorin\"\n  },\n  {\n    \"login\": \"root\",\n    \"plugins\": [\"rvm\", \"git\"]\n  },\n  {\n    \"login\": \"jenkins\",\n    \"home\": \"/var/lib/jenkins\"\n  }\n]\n```\n\n* `node['oh-my-zsh']['theme']` - theme to use for all users unless overridden. Default value is `alanpeabody`.\n* `node['oh-my-zsh']['plugins']` - plugins to use for all users unless overridden. Default value is `[\"git\", \"ruby\", \"gem\"]`.\n* `node['oh-my-zsh']['case_sensitive']` - whether zsh autocompletion should be case-sensitive. Default value is `false`.\n* `node['oh-my-zsh']['autocorrect']` - whether command correction should be enabled. Default value is `true`.\n\n# Usage\n\nInclude `recipe[oh-my-zsh]` in your run\\_list and specify `node['oh-my-zsh']['users']`.",
+  "maintainer": "Vasily Mikhaylichenko",
+  "maintainer_email": "vasily.mikhaylichenko+github@gmail.com",
+  "license": "BSD",
+  "platforms": {
+  },
+  "dependencies": {
+    "zsh": ">= 0.0.0"
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.3.3"
+}

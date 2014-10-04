@@ -1,0 +1,35 @@
+{
+    "company": "tenga",
+    "ad_object": [
+        {
+            "content": 1,
+            "image": "tenga01-300.png",
+            "type": "rectangle"
+        },
+        {
+            "content": 2,
+            "image": "tenga02-300.png",
+            "type": "rectangle"
+        },
+        {
+            "content": 3,
+            "image": "tenga03-300.png",
+            "type": "rectangle"
+        },
+        {
+            "content": 4,
+            "image": "tenga01-250.png",
+            "type": "square"
+        },
+        {
+            "content": 5,
+            "image": "tenga02-250.png",
+            "type": "square"
+        },
+        {
+            "content": 6,
+            "image": "tenga03-250.png",
+            "type": "square"
+        }
+    ]
+}

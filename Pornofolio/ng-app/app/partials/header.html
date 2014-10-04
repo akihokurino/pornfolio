@@ -1,0 +1,24 @@
+<div class="inner-header">
+	<div class="left-header">
+		<a href="#!/favorite">★ お気に入り一覧</a>
+	</div>
+	<div class="center-header">
+		<a href="#!/"></a>
+	</div>
+	<div class="right-header">
+		<a href="#!/create" class="to-create-page">＋ まとめを作る</a>
+	</div>
+</div>
+
+<!--認証用モーダル-->
+<div class="authorization-modal">
+	<p class="message">
+		Pornfolioをご利用いただきましてありがとうございます。<br />
+		現在βテスト中のため、<br/>まとめ作成者を制限させていただいております。<br />
+		正式リリースまでもう少々お待ちください。<br />
+		まとめ作成者はお渡ししたコードを入力してください。
+	</p>
+	<input type="text" ng-model="auth_code" placeholder="認証用コード"/>
+	<div class="send-code-btn" ng-click="sendAuth(auth_code)">送信</div>
+</div>
+<div class="authorization-layer" ng-click="hideAuthModal()"></div>

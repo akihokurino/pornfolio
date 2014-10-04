@@ -1,0 +1,35 @@
+<div class="favorite" ng-init="initialize()">
+	<div class="sub-header">
+		<ul>
+			<li><a href="#!/top">Pornfolioトップ</a></li>
+			<li>お気に入り一覧</li>
+		</ul>
+	</div>
+
+	<div class="content">
+		<div class="favorite-zone">
+			<a href="#!/view/{{post.post_id}}" class="favorite-box" ng-repeat="post in content.posts">
+				<div class="top-box">
+					<img ng-src="{{post.thumb}}" />
+				</div>
+				<div class="bottom-box">
+					<p class="title">{{strimwidth(post.title, 18)}}</p>
+					<p class="description">{{strimwidth(post.desc, 50)}}</p>
+					<div class="meta-data">
+						<span class="category">{{post.category.name}}</span>
+						<span class="like">♥ {{post.like_count}}</span>
+					</div>
+				</div>
+			</a>
+
+			<!--お気に入りが無い場合のメッセージ-->
+			<div class="no-favorite-message">
+				現在お気に入りが登録されておりません。<br />
+				自分の好きなまとめをお気に入りに登録しましょう！
+				<a href="#!/top">トップへ戻る</a>
+			</div>
+		</div>
+	</div>
+
+	<div ng-include="" src="'partials/bottom_ad.html'"></div>
+</div>

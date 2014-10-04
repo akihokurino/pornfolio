@@ -1,0 +1,13 @@
+{
+    "company": "addeluxe",
+    "ad_object": [
+        {
+            "content": "<iframe frameborder=\"0\" scrolling=\"no\" style=\"display:block;margin:0 auto;border:none;padding:0;width:300px;height:250px;\" src=\"http://adv.addeluxe.jp/adv_pc.html?20131023_2&amp;os_id=421458363&amp;adf_id=16&amp;ver=1.4&amp;is_pc=1&amp;color=999999%2CFFFFFF%2C2200CC%2CF25D5D%2C671F28\"></iframe>",
+            "type": "rectangle"
+        },
+        {
+            "content": "<iframe frameborder=\"0\" scrolling=\"no\" style=\"display:block;margin:0 auto;border:none;padding:0;width:250px;height:250px;\" src=\"http://adv.addeluxe.jp/adv_pc.html?20131023_2&amp;os_id=421458363&amp;adf_id=20&amp;ver=1.4&amp;is_pc=1&amp;color=999999%2CFFFFFF%2C2200CC%2CF25D5D%2C671F28\"></iframe>",
+            "type": "square"
+        }
+    ]
+}

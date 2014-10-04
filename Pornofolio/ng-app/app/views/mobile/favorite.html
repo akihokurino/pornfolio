@@ -1,0 +1,22 @@
+<div class="favorite" ng-init="initialize()">
+	<h2>お気に入り</h2>
+	<div class="cells-container">
+		<a href="#!/view/{{post.post_id}}" class="cell" ng-repeat="post in content.posts track by $index">
+			<div class="thumbnail">
+				<img src="{{post.thumb}}" alt="">
+			</div>
+			<div class="info-wrap">
+				<div class="info">
+					<div class="main">
+						<p class="title">{{strimwidth(post.title, 10)}}</p>
+						<p class="desc">{{strimwidth(post.desc, 28)}}</p>
+					</div>
+					<div class="meta">
+						<p class="category">{{post.category.name}}</p>
+						<p class="like">♥ {{post.like_count}}</p>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>

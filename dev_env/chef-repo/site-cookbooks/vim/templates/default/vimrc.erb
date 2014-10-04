@@ -1,0 +1,149 @@
+" 行番号の表示
+set nu
+
+" 右下に表示される行・列の番号を表示
+set ruler
+
+" 自動インデントを有効にする
+set autoindent
+
+" タブを表示する時の幅
+set tabstop=4
+
+" 自動で挿入されるインデントの幅
+set shiftwidth=4
+
+" タブ入力時の幅を4に設定
+set softtabstop=4
+
+" 閉じ括弧入力時に対応する括弧の強調
+set showmatch
+
+" showmatch設定の表示秒数(0.1秒単位)
+set matchtime=4
+
+" インクリメンタルサーチを行う(検索文字入力中から検索)
+set incsearch
+
+" 文字列検索で大文字小文字を区別しない
+set ignorecase
+
+" 文字列検索でマッチするものをハイライト表示する
+set hlsearch
+
+" 検索文字に大文字が含まれる場合にignorecaseをOFFにする(大文字小文字を区別する)
+set smartcase
+
+" コマンドラインにおける補完候補の表示
+set wildmenu
+
+" Deleteキーを有効にする
+set t_kD=^?
+
+" バックスペースキーの動作を普通のテキストエディタと同じようにする
+set backspace=indent,eol,start
+
+" 見た目によるカーソル移動をする(1行が複数行に渡って表示されている時に表示上の行ごとに上下移動させる)
+nnoremap j gj
+nnoremap k gk
+
+" カラー設定
+colorscheme torte
+
+" エンコーディングをutf8に設定
+set encoding=utf8
+
+" ファイルエンコードをutf8に設定
+set fileencoding=utf-8
+
+" 編集中のファイル名を表示
+set title
+
+" ウィンドウの幅より長い行は折り返して表示
+set wrap
+
+" 挿入モードでのカーソル移動
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+
+set nocompatible               " be iMproved
+filetype off
+
+
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim
+  call neobundle#rc(expand('~/.vim/bundle/'))
+endif
+" originalrepos on github
+NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'VimClojure'
+NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'jpalardy/vim-slime'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'szw/vim-tags'
+NeoBundle 'vim-scripts/netrw.vim'
+let g:netrw_liststyle = 3
+let g:netrw_altv = 1
+NeoBundleLazy 'Shougo/neosnippet', {
+      \ 'autoload' : {
+      \   'commands' : ['NeoSnippetEdit', 'NeoSnippetSource'],
+      \   'filetypes' : 'snippet',
+      \   'insert' : 1,
+      \   'unite_sources' : ['snippet', 'neosnippet/user', 'neosnippet/runtime'],
+      \ }}
+NeoBundleLazy 'alpaca-tc/vim-endwise.git', {
+      \ 'autoload' : {
+      \   'insert' : 1,
+      \ }}
+let g:endwise_no_mappings=1
+NeoBundleLazy 'edsono/vim-matchit', { 'autoload' : {
+      \ 'filetypes': 'ruby',
+      \ 'mappings' : ['nx', '%'] }}
+" rubocop
+NeoBundle 'scrooloose/syntastic'
+let g:syntastic_mode_map = { 'mode': 'passive',
+            \ 'active_filetypes': ['ruby'] }
+let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_quiet_warnings = 0
+" ruby関連
+NeoBundle 'astashov/vim-ruby-debugger'
+NeoBundle 'tpope/vim-rails', { 'autoload' : {
+      \ 'filetypes' : ['haml', 'ruby', 'eruby'] }}
+NeoBundleLazy 'basyura/unite-rails', {
+      \ 'depends' : 'Shougo/unite.vim',
+      \ 'autoload' : {
+      \   'unite_sources' : [
+      \     'rails/bundle', 'rails/bundled_gem', 'rails/config',
+      \     'rails/controller', 'rails/db', 'rails/destroy', 'rails/features',
+      \     'rails/gem', 'rails/gemfile', 'rails/generate', 'rails/git', 'rails/helper',
+      \     'rails/heroku', 'rails/initializer', 'rails/javascript', 'rails/lib', 'rails/log',
+      \     'rails/mailer', 'rails/model', 'rails/rake', 'rails/route', 'rails/schema', 'rails/spec',
+      \     'rails/stylesheet', 'rails/view'
+      \   ]
+      \ }}
+autocmd User Rails.view*                 NeoSnippetSource ~/.vim/snippet/ruby.rails.view.snip
+autocmd User Rails.controller*           NeoSnippetSource ~/.vim/snippet/ruby.rails.controller.snip
+autocmd User Rails/db/migrate/*          NeoSnippetSource ~/.vim/snippet/ruby.rails.migrate.snip
+autocmd User Rails/config/routes.rb      NeoSnippetSource ~/.vim/snippet/ruby.rails.route.snip
+" AlpacaTags
+NeoBundleLazy 'alpaca-tc/alpaca_tags', {
+      \ 'depends': 'Shougo/vimproc',
+      \ 'autoload' : {
+      \   'commands': ['TagsUpdate', 'TagsSet', 'TagsBundle']
+      \ }}
+augroup AlpacaTags
+  autocmd!
+  if exists(':Tags')
+    autocmd BufWritePost Gemfile TagsBundle
+    autocmd BufEnter * TagsSet
+  endif
+augroup END
+
+filetype plugin indent on     " required!
+filetype indent on
+syntax on

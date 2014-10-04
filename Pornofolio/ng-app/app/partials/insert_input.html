@@ -1,0 +1,26 @@
+<div class="insert-input-zone">
+	<div class="input-zone headline-insert-zone">
+		<input type="text" class="headline-input" ng-model="insert_headline" placeholder="見出しを入力して下さい" />
+		<p class="error-msg">{{headline_error_msg}}</p>
+		<div class="cancel-btn" ng-click="cancelInsert()">キャンセル</div>
+		<div class="add-btn" ng-click="insertData('headline', insert_headline, $index)">追加</div>
+	</div>
+	<div class="input-zone url-insert-zone">
+		<input type="text" class="url-input" ng-model="insert_url" placeholder="xvideosまたはアゲサゲのURLを入力して下さい" />
+		<p class="error-msg">{{url_error_msg}}</p>
+		<div class="cancel-btn" ng-click="cancelInsert()">キャンセル</div>
+		<div class="add-btn" ng-click="insertData('url', insert_url, $index)">追加</div>
+	</div>
+	<div class="input-zone text-insert-zone">
+		<textarea type="text" class="text-input" ng-model="insert_text" placeholder="本文を入力して下さい"></textarea>
+		<p class="error-msg">{{text_error_msg}}</p>
+		<div class="cancel-btn" ng-click="cancelInsert()">キャンセル</div>
+		<div class="add-btn" ng-click="insertData('text', insert_text, $index)">追加</div>
+	</div>
+</div>
+<div id="insert-input-btns{{$index}}" class="insert-input-btns">
+	<div class="headline-btn input-btn" ng-click="showInsertInput('headline', $index)"></div>
+	<div class="url-btn input-btn" ng-click="showInsertInput('url', $index)"></div>
+	<div class="text-btn input-btn" ng-click="showInsertInput('text', $index)"></div>
+	<span class="cancel-insert-btn" ng-click="hideInsertInputBtns()">×</span>
+</div>

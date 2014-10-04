@@ -1,0 +1,6 @@
+.DS_Store
+*~
+*.swp
+dev_env/vagrant/CentOS-x84_64-adult.box
+dev_env/vagrant/.vagrant/
+dev_env/chef-repo/cookbooks/

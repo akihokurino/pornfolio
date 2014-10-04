@@ -1,0 +1,16 @@
+<div class="tags-search" ng-init="initialize()">
+	<h2>タグで検索をする</h2>
+	<div class="tags">
+		<ul>
+			<li ng-repeat="tag in content.tags track by $index">
+				<a ng-href="#!/?tag_id={{tag.id}}">{{tag.name}}</a>
+			</li>
+		</ul>
+	</div>
+	<!--
+	<div class="search">
+		<input type="text">
+		<input type="submit" value="検索">
+	</div>
+	-->
+</div>

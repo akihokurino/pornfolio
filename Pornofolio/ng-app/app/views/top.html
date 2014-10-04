@@ -1,0 +1,104 @@
+<div class="top" ng-init="initialize()">
+
+	<div class="sub-header">
+		<h2>みんなのエロが、集まるサイト</h2>
+	</div>
+
+	<div class="ranking-zone">
+		<div class="inner-ranking-zone">
+			<a class="ranking-box" ng-repeat="post in top2" href="#!/view/{{post.post_id}}">
+				<div class="top-ranking-box">
+					<img ng-src="{{post.thumb}}" />
+				</div>
+				<div class="bottom-ranking-box">
+					<p class="ranking-title">
+						{{strimwidth(post.title, 19)}}
+					</p>
+					<p class="ranking-desc">
+						{{strimwidth(post.desc, 51)}}
+					</p>
+					<div class="meta-data">
+						<span class="category">{{post.category.name}}</span>
+						<span class="like">♥{{post.like_count}}</span>
+					</div>
+				</div>
+			</a>
+			<div class="right-ranking-box">
+				<a class="ranking-box" ng-repeat="post in right3" href="#!/view/{{post.post_id}}">
+					<div class="top-ranking-box">
+						<img ng-src="{{post.thumb}}" />
+					</div>
+					<div class="bottom-ranking-box">
+						<p class="ranking-title">
+							{{strimwidth(post.title, 11)}}
+						</p>
+						<p class="ranking-desc">
+							{{strimwidth(post.desc, 32)}}
+						</p>
+						<div class="meta-data">
+							<span class="category">{{post.category.name}}</span>
+							<span class="like">♥{{post.like_count}}</span>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="content">
+		<div class="inner-content">
+			<div class="left-content">
+				<ul class="category">
+					<li><a href="#!/top" ng-class="isDefault()" ng-click="adjustTop()">すべて</a></li>
+					<li ng-repeat="category in content.categories track by $index">
+						<a href="#!/?category_id={{category.id}}" id="category{{category.id}}" ng-class="isSelected(category.id)" ng-click="adjustTop()">
+							{{category.name}}
+						</a>
+					</li>
+				</ul>
+				<div class="tag-li">タグ</div>
+				<div class="tags-zone">
+					<a href="#!/?tag_id={{tag.id}}" ng-repeat="tag in content.tags track by $index" ng-click="adjustTop()" ng-if="$index < 20">
+						{{tag.name}}
+					</a>
+					<span class="more-tags-btn" ng-if="content.tags.length > 20" ng-click="showMoreTags()" ng-hide="show_more_tags">その他のタグの表示</span>
+					<a href="#!/?tag_id={{tag.id}}" ng-repeat="tag in content.tags track by $index" ng-click="adjustTop()" ng-if="$index >= 20" ng-show="show_more_tags">
+						{{tag.name}}
+					</a>
+				</div>
+			</div>
+			<div class="right-content">
+				<div class="upper-pagenation">
+					<span class="page{{page}}" ng-repeat="page in all_page track by $index" ng-click="getPage(page)">{{setPage(page)}}</span>
+				</div>
+				<div class="main-content">
+					<a href="#!/view/{{post.post_id}}" class="content-box" ng-repeat="post in content.posts track by $index" ng-click="toPageTop()">
+						<div class="top-content-box">
+							<img ng-src="{{post.thumb}}" />
+						</div>
+						<div class="title">
+							{{strimwidth(post.title, 14)}}
+						</div>
+						<div class="description">
+							{{strimwidth(post.desc, 40)}}
+						</div>
+						<div class="meta-data">
+							<span class="category">{{post.category.name}}</span>
+							<span class="like">♥ {{post.like_count}}</span>
+						</div>
+					</a>
+
+					<!--コンテンツが無い場合のメッセージ-->
+					<div class="no-content-message">
+						現在コンテンツがございません。
+					</div>
+				</div>
+				<div class="under-pagenation">
+					<span class="page{{page}}" ng-repeat="page in all_page track by $index" ng-click="getPage(page)">{{setPage(page)}}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div ng-include="" src="'partials/bottom_ad.html'"></div>
+</div>

@@ -1,0 +1,528 @@
+
+
+/*-----サブヘッダー部分のスタイル-----*/
+
+.create .sub-header{
+	width: 100%;
+	height: 32px;
+	border-bottom: solid 1px #CCC;
+}
+
+.create .sub-header ul{
+	width: 1080px;
+	margin: 0 auto;
+	list-style-type: none;
+	overflow: hidden;
+	height: 100%;
+}
+
+.create .sub-header ul li{
+	float: left;
+	height: 100%;
+	line-height: 34px;
+	padding-left: 10px;
+	padding-right: 20px;
+	color: #999;
+}
+
+.create .sub-header ul li a{
+	color: #999;
+}
+
+.create .sub-header ul li:first-child{
+	background: url(../images/sub-header-arrow.png) no-repeat;
+	background-size: 15px 34px;
+	background-position: right center;
+}
+
+/*-----コンテンツ部分のスタイル-----*/
+.create .content{
+	width: 100%;
+	padding-top: 30px;
+}
+
+.create .inner-content{
+	width: 1080px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.create .left-content{
+	width: 700px;
+	float: left;
+	box-sizing: border-box;
+	padding-right: 10px;
+	border-right: solid 1px #e2e2e2;
+	padding-bottom: 30px;
+}
+
+.create .left-content h3{
+	font-size: 18px;
+	background-color: #eee;
+	height: 46px;
+	line-height: 46px;
+	padding-left: 15px;
+	margin-bottom: 20px;
+	border-left: 15px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	letter-spacing: 1px;
+	color: #444;
+	box-sizing: border-box;
+	margin-left: 15px;
+}
+
+.create .basic-data-input{
+	background-color: #fff;
+	padding: 10px;
+	margin-left: 15px;
+	overflow: hidden;
+	padding-bottom: 20px;
+	border-bottom: 1px dashed #FE8880;
+}
+
+.create .error-msg{
+	font-size: 14px;
+	color: red;
+	margin-top: 5px;
+}
+
+.create .category-error{
+	display: block;
+}
+
+.create .left-content input{
+	border: solid 1px #CCC;
+	border-radius: 5px;
+	display: block;
+	padding-left: 5px;
+	font-size: 14px;
+}
+.create .left-content input:hover{
+	border: solid 1px #FECCC8;
+}
+
+.create .basic-title-input{
+	width: 650px;
+	height: 35px;
+}
+
+.create .basic-description-input{
+	border: solid 1px #CCC;
+	border-radius: 5px;
+	display: block;
+	margin-top: 10px;
+	width: 645px;
+	max-width: 680px;
+	height: 70px;
+	padding: 5px;
+	font-size: 14px;
+}
+
+.create .basic-description-input:hover{
+	border: solid 1px #FECCC8;
+}
+
+.create .basic-janle-select {
+	width: 322px;
+	height: 37px;
+	-webkit-appearance:button;
+	-moz-appearance:button;
+	appearance:button;
+	font-size: 14px;
+	padding-left: 10px;
+	color: #666;
+	border: none;
+	border: 1px solid #CCC;
+	background: url(../images/janlebox.png)no-repeat;
+}
+
+.create .basic-janle-select:hover{
+	border: solid 1px #FECCC8;
+	cursor: pointer;
+}
+
+.create .select-wrap{
+	float: left;
+	width: 200px;
+	margin-top: 10px;
+}
+
+.create select{
+	display: block;
+	width: 120px;
+}
+
+.create .username-wrap{
+	float: right;
+	width: 320px;
+	margin-top: 10px;
+}
+
+.create .basic-name-input{
+	width: 315px;
+	height: 35px;
+	font-size: 14px;
+	display: block;
+}
+
+.create .hover-zone{
+	height: 36px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background-image: url(../images/add-something.png);
+	background-repeat: no-repeat;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.create .insert-zone{
+	display: none;
+}
+
+.create .insert-zone .insert-input-zone{
+	background-color: #eee;
+	overflow: hidden;
+	padding: 10px;
+	margin-left: 15px;
+	display: none;
+	margin-bottom: -20px;
+}
+
+.create .insert-input-btns{
+	background-color: #eee;
+	padding: 10px;
+	margin-left: 15px;
+	overflow: hidden;
+	margin-top: 30px;
+	margin-bottom: 40px;
+	display: block;
+	position: relative;
+}
+
+.create .insert-input-btns .input-btn{
+	width: 202px;
+	height: 36px;
+	line-height: 35px;
+	float: left;
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+.create .insert-input-btns .input-btn:last-child{
+	margin-right: 0px;
+}
+
+.create .cancel-insert-btn{
+	font-size: 30px;
+	cursor: pointer;
+	position: absolute;
+	top: 4px;
+	right: 13px;
+	color: #999;
+}
+
+.create .output{
+	-webkit-transition: 0.5s linear all;
+	position: relative;
+}
+
+.create .content-zone{
+	background-color: #fff;
+	margin-left: 15px;
+	padding: 5px;
+	padding-top:0px;
+	padding-bottom:0px;
+}
+
+.create .output .headline{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	color: #444;
+	padding-left:30px;
+	margin-left: 0px;
+	font-size: 18px;
+	font-weight: normal;
+	border-bottom: solid 2px #FE5F56;
+	background: url(../images/circle-pink-half.png) no-repeat;
+	background-size: 22px;
+	background-position: left bottom;
+	letter-spacing: 1px;
+}
+
+.create iframe{
+	display: block;
+	width: 600px;
+	height: 400px;
+	margin: 0 auto;
+	margin-bottom: 0px;
+	background: #F8F8F8;
+	padding:20px;
+	padding-left: 30px;
+	padding-right: 30px;
+	border: none;
+}
+
+.create .output .text{
+	width: 643px;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 14px;
+	color: #666;
+	letter-spacing: 1px;
+	background: #F8F8F8;
+	padding: 10px;
+	border-radius: 3px;
+}
+
+.create .option-btns{
+	overflow: hidden;
+	padding-top: 10px;
+}
+
+.create .delete-content-btn{
+	float: right;
+	display: block;
+	width: 78px;
+	height: 31px;
+	background: url(../images/delete.png) no-repeat;
+	border-radius: 3px;
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+	line-height: 30px;
+	letter-spacing: 3px;
+	padding-top: 1px;
+	padding-left: 5px;
+	cursor: pointer;
+	margin-right: 15px;
+}
+
+.create .delete-content-btn:hover {
+	opacity: 0.7;
+}
+
+.create .output.ng-enter {
+	@include transition-duration(1.5s);
+	@include transition-timing-function(linear);
+	opacity: 0;
+}
+
+.create .output.ng-enter-active {
+	opacity: 1;
+}
+
+.create .output.ng-leave {
+	@include transition-duration(0.5s);
+	@include transition-timing-function(linear);
+	opacity: 1;
+}
+
+.create .output.ng-leave-active {
+	opacity: 0;
+}
+
+.create .default-input-zone .input-zone{
+	background-color: #eee;
+	overflow: hidden;
+	padding: 10px;
+	margin-left: 15px;
+	display: none;
+	margin-top: 20px;
+}
+
+.create .input-zone input{
+	border: solid 1px #e2e2e2;
+	border-radius: 5px;
+	display: block;
+	padding-left: 5px;
+	font-size: 14px;
+	width: 645px;
+	height: 35px;
+}
+
+.create .input-zone textarea{
+	border: solid 1px #e2e2e2;
+	border-radius: 5px;
+	display: block;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	font-size: 14px;
+	width: 645px;
+	height: 65px;
+}
+
+.create .add-btn{
+	width: 120px;
+	height: 30px;
+	background-color: #FE5F56;
+	line-height: 30px;
+	text-align: center;
+	color: #fff;
+	float: right;
+	margin-right: 15px;
+	margin-top: 10px;
+	cursor: pointer;
+	font-size: 14px;
+	border-radius: 3px;
+}
+
+.create .add-btn:hover{
+	opacity: 0.8;
+}
+
+.create .cancel-btn{
+	width: 120px;
+	height: 30px;
+	background-color: #aaa;
+	line-height: 30px;
+	text-align: center;
+	color: #fff;
+	float: right;
+	margin-top: 10px;
+	cursor: pointer;
+	font-size: 14px;
+	border-radius: 3px;
+}
+
+.create .cancel-btn:hover{
+	opacity: 0.8;
+}
+
+.create .input-btns{
+	background-color: #eee;
+	padding: 10px;
+	margin-left: 15px;
+	overflow: hidden;
+	margin-top: 30px;
+}
+
+.create .input-btns .input-btn{
+	width: 202px;
+	height: 36px;
+	line-height: 35px;
+	float: left;
+	cursor: pointer;
+	margin-right: 20px;
+}
+
+.create .input-btns .input-btn:last-child{
+	margin-right: 0px;
+}
+
+.create .headline-btn{
+	background-image: url(../images/add-headline.png);
+	background-repeat: no-repeat;
+}
+
+.create .headline-btn:hover{
+	opacity: 0.8;
+}
+
+.create .url-btn{
+	background-image: url(../images/add-movie.png);
+	background-repeat: no-repeat;
+}
+
+.create .url-btn:hover{
+	opacity: 0.8;
+}
+
+.create .text-btn{
+	background-image: url(../images/add-text.png);
+	background-repeat: no-repeat;
+}
+
+.create .text-btn:hover{
+	opacity: 0.8;
+}
+
+.create .next-btn{
+	display: block;
+	width: 200px;
+	height: 38px;
+	margin: 0 auto;
+	margin-top: 40px;
+	background-color: #FE5F56;
+	border-radius: 3px;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	line-height: 38px;
+	cursor: pointer;
+}
+
+.create .next-btn:hover {
+	opacity: 0.8;
+}
+
+.create .right-content{
+	width: 220px;
+	float: left;
+	box-sizing: border-box;
+}
+
+.create .side-progress{
+	width: 250px;
+	margin: 30px auto;
+	color: #999;
+	font-size: 14px;
+}
+
+.create .side-progress p{
+	margin-top: 20px;
+	padding-top: -30px;
+	padding-bottom: 30px;
+	text-align: center;
+	background: url(../images/progress-arrow-down.png)no-repeat;
+	background-size: 33px 15px;
+	background-position: center bottom;
+}
+.create .side-progress p:nth-child(3){
+	background: none;
+}
+.create .side-progress p.now{
+	color: #666;
+	font-weight: bold;
+}
+
+
+/*-----下部分のプログレス部分のスタイル-----*/
+.create .bottom-progress{
+	width: 100%;
+	background-color: #eee;
+	height: 51px;
+	margin-bottom: 20px;
+	font-size: 14px;
+	border: 1px solid #ddd;
+}
+
+.create .bottom-progress ul{
+	width: 1080px;
+	margin: 0 auto;
+	height: 100%;
+	overflow: hidden;
+	list-style-type: none;
+}
+
+.create .bottom-progress ul li{
+	padding-left: 30px;
+	padding-right: 45px;
+	line-height: 51px;
+	height: 100%;
+	float: left;
+	color: #BBBBBB;
+	background: url(../images/progress-arrow.png)no-repeat;
+	background-size: 15px 53px;
+	background-position: right center;
+}
+
+.create .bottom-progress ul li:nth-child(3){
+	background: none;
+}
+
+.create .bottom-progress ul li.now{
+	color: #666666;
+	font-weight: bold;
+}

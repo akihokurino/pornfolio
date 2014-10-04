@@ -1,0 +1,99 @@
+.contact .sub-header{
+	width: 100%;
+	height: 32px;
+	border-bottom: solid 1px #CCC;
+}
+
+.contact .sub-header ul{
+	width: 1080px;
+	margin: 0 auto;
+	list-style-type: none;
+	overflow: hidden;
+	height: 100%;
+}
+
+.contact .sub-header ul li{
+	float: left;
+	height: 100%;
+	line-height: 34px;
+	padding-left: 10px;
+	padding-right: -5px;
+	color: #999;
+}
+
+.contact .sub-header ul li a{
+	color: #999;
+}
+
+.contact .sub-header ul li:first-child{
+	background: url(../images/sub-header-arrow.png) no-repeat;
+	background-size: 15px 34px;
+	background-position: right center;
+	padding-right: 20px;
+}
+
+.contact .content {
+	margin: 0 auto;
+	width: 500px;
+	padding-top: 40px;
+}
+
+.contact .content p {
+	font-size: 16px;
+	font-weight: normal;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	color: #666;
+}
+
+.contact input,textarea {
+	padding: 5px;
+	width: 100%;
+	height: 20px;
+	border-radius: 3px;
+	border: 1px solid #CCC;
+	color: #444;
+}
+
+.contact textarea {
+	height: 100px;
+}
+
+.contact input.submit {
+	margin-left: 410px;
+	padding: 10px;
+	width: 100px;
+	height: 40px;
+	font-size: 17px;
+	letter-spacing: 2px;
+	line-height: 17px;
+	cursor: pointer;
+	margin-top: 20px;
+	background-color: #aaa;
+	color: #fff;
+}
+
+.contact input.submit:hover {
+	background: #888;
+	color: white;
+}
+
+.contact .contact-message {
+	width: 300px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border: solid 3px #FE5F56;
+	border-radius: 3px;
+	background-color: #FE5F56;
+	position: fixed;
+	z-index: 100;
+	top: 520px;
+	left: 50%;
+	margin-left: -150px;
+	font-size: 14px;
+	color: #fff;
+	display: none;
+	opacity: 1;
+}
+

@@ -1,0 +1,477 @@
+/*-----サブヘッダー部分のスタイル-----*/
+.top .sub-header{
+	width: 100%;
+	height: 32px;
+	border-bottom: solid 1px #e2e2e2;
+}
+
+.top .sub-header h2{
+	text-align: center;
+	line-height: 32px;
+	font-size: 14px;
+	color: #999;
+	font-weight: normal;
+}
+
+
+/*-----ランキング部分のスタイル-----*/
+.top .ranking-zone{
+	width: 100%;
+	border-bottom: solid 1px #e2e2e2;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background: #EEE;
+}
+
+.top .inner-ranking-zone{
+	width: 1080px;
+	margin: 0 auto;
+	height: auto;
+	overflow: hidden;
+}
+
+.top .inner-ranking-zone h3{
+	font-size: 20px;
+	background-color: #eee;
+	height: 36px;
+	line-height: 35px;
+	padding-left: 15px;
+	margin-bottom: 0px;
+	border-left: 15px solid #AAAAAA;
+	letter-spacing: 1px;
+	color: #444;
+	box-sizing: border-box;
+}
+
+.top .ranking-box{
+	width: 330px;
+	height: 295px;
+	overflow: hidden;
+	float: left;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 7px;
+	margin-right: 7px;
+	font-size: 14px;
+	padding: 7px;
+	background: white;
+	box-shadow: 0 0 2px #999;
+}
+
+.top .ranking-box:hover {
+	background: #F8F8F8;
+}
+
+.top .top-ranking-box{
+	width: 330px;
+	height: 200px;
+	overflow: hidden;
+	margin-right: 20px;
+}
+
+.top .ranking-box img{
+	width: 100%;
+	height: auto;
+}
+
+.top .bottom-ranking-box{
+	width: 190px;
+	position: relative;
+	height: 100%;
+}
+
+.top .ranking-title,
+.top .title {
+	width: 320px;
+	padding: 5px;
+	padding-bottom: 0px;
+	font-size: 16px;
+	border-bottom: 2px dotted #FE8880 !important;
+}
+
+.top .title {
+	width: 256px;
+	border-bottom: 1px dotted #FE8880 !important;
+}
+
+.top .ranking-desc,
+.top .description{
+	width: 320px;
+	height: 38px;
+	padding: 5px;
+	padding-top: 4px;
+	font-size: 12px;
+	color: #888;
+}
+
+.top .description {
+	width: 250px;
+}
+
+.top .bottom-ranking-box .meta-data,
+.top .content-box .meta-data
+{
+	width: 320px;
+	height: auto;
+	overflow: hidden;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.top .content-box .meta-data {
+	width: 266px;
+}
+
+.top .bottom-ranking-box .meta-data .like,
+.top .content-box .meta-data .like
+{
+	display: inline-block;
+	float: right;
+	text-align: right;
+	width: 30%;
+	color: #FE5F56;
+	padding-right: 0px;
+}
+
+.top .bottom-ranking-box .meta-data .category,
+.top .content-box .meta-data .category
+{
+	display: inline-block;
+	float: left;
+	width: 50%;
+	color: #999999;
+	font-weight: normal;
+	padding-left: 5px;
+}
+
+
+.top .right-ranking-box .ranking-box {
+	height: 85px;
+	margin-bottom: 1px;
+	border-left: 5px solid #FE8880;
+}
+
+.top .right-ranking-box .ranking-box .top-ranking-box {
+	float: left;
+	width: 108px;
+	height: 86px;
+	overflow: hidden;
+	margin-right: 10px;
+}
+
+.top .right-ranking-box .ranking-box img{
+	width: 138px;
+	height: auto;
+}
+
+.top .right-ranking-box .bottom-ranking-box{
+	float: left;
+	width: 208px;
+	position: relative;
+}
+
+.top .right-ranking-box .ranking-title
+{
+	width: 100%;
+	padding: 1px;
+	padding-top: 2px;
+	padding-bottom: 0px;
+	font-size: 16px;
+	border:none;
+}
+
+.top .right-ranking-box .ranking-desc {
+	width: 210px;
+	height: 35px;
+	padding: 5px;
+	padding-top: 2px;
+	padding-left: 3px;
+	font-size: 12px;
+	color: #888;
+}
+
+.top  .right-ranking-box .bottom-ranking-box .meta-data {
+	width: 210px;
+	height: auto;
+	overflow: hidden;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+
+.top .last{
+	margin-right: 0px;
+}
+
+
+/*-----コンテンツ部分のスタイル-----*/
+.top .content{
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+.top .inner-content{
+	width: 1080px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.top .left-content{
+	float: left;
+	width: 185px;
+	margin-left: 20px;
+}
+
+.top .left-content .category{
+	width: 100%;
+	list-style-type: none;
+	margin-top: 40px;
+}
+
+.top .left-content .category li{
+	width: 100%;
+	height: 36px;
+	font-size: 14px;
+}
+
+.top .left-content .category li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: 40px;
+	padding-left: 40px;
+	color: #777777;
+	background: url(../images/circle-pink.png) no-repeat;
+	background-size: 8px 8px;
+	background-position: 11px center;
+	box-sizing: border-box;
+}
+
+.top .left-content .category li a.current {
+	background-color: #eee;
+	color: #333;
+	font-weight: bold;
+}
+
+.top .left-content .category li a:hover{
+	background-color: #eee;
+}
+
+.top .left-content .category li a.category-selected {
+	background-color: #eee;
+}
+
+.top .tag-li{
+	width: 100%;
+	padding-left: 20px;
+	box-sizing: border-box;
+	height: 35px;
+	line-height: 46px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	border-top: solid 1px #e2e2e2;
+	font-size: 17px;
+	color: #FE5F56;
+}
+
+.top .tags-zone{
+	width: 95%;
+	overflow: hidden;
+	margin-left: 10px;
+}
+
+.top .tags-zone a{
+	display: inline-block;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border: solid 1px #CCC;
+	background-color: #eee;
+	padding: 3px 5px;
+	color: #888;
+	font-size: 12px;
+	border-radius: 3px;
+}
+
+.top .tags-zone a:hover {
+	opacity: 0.8;
+}
+
+.top .tags-zone span {
+	display: block;
+	clear: both;
+	color: #FE8880;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.top .right-content{
+	float: right;
+	width: 860px;
+	margin-right: 15px;
+}
+
+.top .upper-pagenation{
+	width: 100%;
+	height: 37px;
+	box-sizing: border-box;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	margin-left: 38px;
+}
+
+.top .upper-pagenation span{
+	display: inline-block;
+	width: auto;
+	color: #666;
+	width: 40px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	font-size: 15px;
+	font-weight: normal;
+	border: solid 1px #CCC;
+	margin-right: 10px;
+	text-align: center;
+	line-height: 38px;
+	cursor: pointer;
+}
+
+.top .upper-pagenation span.current {
+	background:#EEEEEE;
+}
+
+.top .upper-pagenation span:hover {
+	background:#EEEEEE;
+}
+
+.top .main-content{
+	overflow: hidden;
+	height: auto;
+	width: 100%;
+	background: #EEE;
+	margin-top: -1px;
+	border: solid 1px #CCC;
+}
+
+.top .content-box{
+	width: 276px;
+	height: 273px;
+	margin: 5px;
+	box-sizing: border-box;
+	padding: 5px;
+	position: relative;
+	float: left;
+	display: block;
+	background: white;
+	box-shadow: 0 0 2px #999;
+	-webkit-transition: 0.1s linear all;
+}
+
+.top .content-box.ng-enter {
+	@include transition-duration(1.0s);
+	@include transition-timing-function(linear);
+	opacity: 0;
+}
+
+.top .content-box.ng-enter-active {
+	opacity: 1;
+}
+
+.top .content-box.ng-leave {
+	@include transition-duration(0.5s);
+	@include transition-timing-function(linear);
+	opacity: 1;
+}
+
+.top .content-box.ng-leave-active {
+	opacity: 0;
+}
+
+
+.top .content-box:hover {
+	background: #EEE;
+}
+
+.top .content-box .top-content-box{
+	width: 100%;
+	height: 165px;
+	overflow: hidden;
+}
+
+.top .top-content-box img{
+	width: 100%;
+}
+
+/*
+.top .content-box .meta-data .ranking{
+	display: inline-block;
+	float: left;
+	margin-left: 5px;
+	color: #B25900;
+}
+*/
+
+.top .under-pagenation{
+	width: 100%;
+	height: 37px;
+	box-sizing: border-box;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: -1px;
+	margin-left: 38px;
+}
+
+.top .under-pagenation span{
+	display: inline-block;
+	width: auto;
+	color: #666;
+	width: 40px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 15px;
+	font-weight: normal;
+	border: solid 1px #CCC;
+	margin-right: 10px;
+	text-align: center;
+	line-height: 38px;
+	cursor: pointer;
+}
+
+.top .under-pagenation span.current {
+	background:#EEEEEE;
+}
+.top .under-pagenation span:hover {
+	background:#EEEEEE;
+}
+
+.top .pagedammy{
+	border: none !important;
+	cursor: auto !important;
+}
+
+.top .pagedammy:hover{
+	background-color: #fff !important;
+}
+
+.top .main-content .no-content-message{
+	width: 400px;
+	background-color: #fff;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border: solid 3px #FE5F56;
+	border-radius: 3px;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 70px;
+	font-size: 14px;
+	line-height: 30px;
+	margin-bottom: 70px;
+	font-size: 14px;
+	display: none;
+	color: #444;
+}
+

@@ -1,0 +1,30 @@
+{
+    //"mysql": {
+    //    "server_root_password": "root",
+    //    "server_repl_password": "root",
+    //    "server_debian_password": "root"
+    //},
+    "nginx":{
+        "application" : "Pornofolio",
+        "port" : 80
+    },
+    "run_list":[
+        "recipe[yumsetup]",
+        "recipe[yum::epel]",
+        "recipe[yum::remi]",
+        "recipe[sudo]",
+        "recipe[git]",
+        "recipe[vim]",
+        "recipe[zsh]",
+        "recipe[oh-my-zsh]",
+        "recipe[packages]",
+        "recipe[nodejs]",
+        "recipe[npm]",
+        "recipe[redis]",
+    //    "recipe[mysql::server]",
+        "recipe[iptables]",
+        "recipe[nginx]",
+        "recipe[ruby]",
+        "recipe[gem]"
+    ]
+}
